@@ -76,11 +76,55 @@ npm install create-react-app -g
 ##### 新建項目
 
 ```
-create-react-app typescript-react-app -template -typescript
+create-react-app typescript-react-app --template typescript
 ```
 
 分拆command說明
 
 - create-react-app (安裝命令)
+
 - typescript-react-app (安裝後的目錄名稱)
+
 - -template -typescript (使用typescript為開發語言)
+
+###### 第一次運行測試
+
+  ```
+  npm run start
+  ```
+
+###### 開始編程
+
+  在程式目錄內
+
+  ```
+  # 開啟visual studio code
+  code .
+  or
+  code "your program path"
+  ```
+
+###### 定義一個Counter組件
+
+在scr目錄內新建components目錄
+
+```
+# Counter.tsx
+
+import * as React from 'react'
+
+//創建類型接口
+export interface Iprops{
+	value: number
+}
+
+//使用接口代替PropTypes進行類型校驗
+const Counter = ( {value} : Iprops ) => {
+	return <p>Clicked: {value} times</p>
+}
+
+export default Counter
+```
+
+
+
